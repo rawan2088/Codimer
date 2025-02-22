@@ -1,0 +1,315 @@
+/* RESET STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  timer{
+    font-family: "Jacquarda Bastarda 9", serif;
+
+  }
+  
+  /* GENERAL STYLING */
+  body {    
+    /* background-color: #1A0523; Dark purple background for contrast */
+    /* background-color: #FBE4D8; */
+    background-color: #ecd4ea;
+    /* background-color: #DDC0FD; */
+    
+    /* background-color: #1A0523; */
+    
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    /* align-items: center; */
+    /* height: 100vh; */
+    /* justify-content: center; */
+    
+    padding: 0px 15px;
+
+    
+    /* width: 520px; */
+    /* height: 465px; */
+    /* background: 
+    linear-gradient(135deg, #1A0523, #2A0A37, #3A1B4A),
+    url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="1" fill="%23B889E2" opacity="0.3"/></svg>');
+    background-size: 400% 400%, 200px 200px; */
+    animation: nebula 20s ease infinite;
+  }
+  
+  @keyframes nebula {
+    0% { background-position: 0% 50%, 0 0; }
+    50% { background-position: 100% 50%, 100% 100%; }
+    100% { background-position: 0% 50%, 0 0; }
+  }
+  
+/* CONTROL BUTTONS (WINDOW CONTROLS) */
+header {
+  width: 100%;
+  height: 11vh;
+  /* background-color: #2A0A37; */
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  /* padding: 1rem; */
+  /* background-color: white; */
+  
+  
+  -webkit-app-region: drag; /* Makes the header draggable */
+  user-select: none; /* Prevent text selection */
+}
+
+title{
+  /* font-family: ; */
+    /* color: #1A0523; */
+    color: #190019;
+  }
+  
+  
+  #controlButtons{
+    display: flex;
+    gap: 10px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    
+}
+timer{
+  color: #FBE4D8;
+
+}
+
+.controlButton {
+  font-family: "Jacquarda Bastarda 9", serif;
+  cursor: pointer;
+  /* background: ; */
+  border: none;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    height: 50px;
+    width: 40px;
+    color: #B889E2; /* Lavender buttons */
+    background-color: #190019;
+    /* background-color: #1A0523; */
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
+    /* background-color: white; */
+    
+    -webkit-app-region: no-drag; /* Disable drag on buttons */
+
+    border-radius: 5px;
+    
+  }
+
+
+  .controlButton:hover {
+    color: #D144A7; /* Magenta when hovered */
+  }
+  
+  #close {
+    color: #C1121F;
+  }
+  
+  
+  main{
+    /* background-color: #1A0523; */
+    background-color: #190019;
+    /* background-color: #511f52; */
+    /* width:  490px; */
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* padding: 10px; */
+    
+    margin-bottom: 0px;
+    
+    border-radius: 5px;
+    
+    
+    border:3px solid #A02E7C ;
+    box-sizing: content-box;
+    
+    padding: 10px;
+  }
+  
+  /* TIMER CONTAINER */
+  #timerContainer {
+    /* background-color: #8F3178; */
+    background-color: #854f6c;
+
+    /* background-color: #3A1B4A;  */
+    /* box-shadow: 0 0 20px rgba(160, 233, 255, 0.3); */
+    
+    width: 355px;
+    margin: auto;
+    height: 210px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    
+    /* margin-top: 10px; */
+    /* box-shadow: 0 0 15px rgba(209, 68, 167, 0.7); */
+    transition: 0.5s;
+  }
+  
+  #mainTimer {
+    font-size: 6rem;
+    /* font-weight: bold; */
+    font-stretch: wider;
+    color: white;
+    letter-spacing: 5px;
+  }
+
+  
+  #mainCaption{
+    color: #DDC0FD;
+    font-size: 2.9rem;
+    opacity: 60%;
+  }
+  
+  /* BUTTONS CONTAINER */
+  .buttonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .buttonsContainer button {
+    background: linear-gradient(135deg, #D144A7, #A02E7C);
+    border: none;
+    color: white;
+    padding: 0.4rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 1s;
+    
+    opacity: 70%;
+  }
+  
+
+  /* #mainTimerBtn{
+    background-color: #FFB6C1;
+    }
+    #saveCurrentTimerBtn{
+      background-color: #FFC3A0;
+      }
+      #restartBtn{
+        background-color: #A7C7E7;
+        } */
+        
+        
+        /* #mainTimerBtn { background: #A02E7C; } Primary action */
+        /* #saveCurrentTimerBtn { background: #5B8C85; } Secondary */
+        /* #restartBtn { background: #2A4D6E; } Tertiary */
+        
+        #mainTimerBtn { background: #A02E7C; } /* Primary action */
+        #saveCurrentTimerBtn { background: #533b5b; } /* Secondary */
+        /* #restartBtn { background: #190019; } Tertiary */
+        
+        .buttonsContainer button:hover {
+          /* transform: scale(1.1); */
+          opacity: 100%;
+        } 
+        
+        /* TIMER BUNDLES */
+        #timersContainer {
+          display: flex;
+          gap: 1rem;
+    /* margin-top: rem; */
+  }
+  
+  .timerBundle {
+    background: #2A0A37;
+    padding: 1rem;
+    /* aspect-ratio:  5/3; */
+    width: 100px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(180, 137, 226, 0.5);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    animation: glow 1.5s infinite alternate;
+    box-shadow: 0 0 15px rgba(112, 225, 232, 0.8);
+    
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px rgba(190, 150, 255, 0.3); }
+    to { box-shadow: 0 0 20px rgba(220, 170, 255, 0.6); }
+  }
+  
+  .littleTimer {
+    font-size: 1.5rem;
+    color: #A0E9FF; /* Neon cyan for contrast */
+  }
+  
+  .timerBundle figcaption {
+    font-size: 1rem;
+    color: #B889E2;
+    /* margin-top: 0.5rem; */
+  }
+  
+  /* MAKE MAIN TIMER CLICKABLE */
+  #timerContainer:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(209, 68, 167, 1);
+}
+
+
+.timerBundle:nth-of-type(1){
+background: linear-gradient(to bottom, #E6CFFF, #FFD1DC, #FFF5E1);
+}
+
+.timerBundle:nth-of-type(1) *{
+    color: #6D4C74;
+}
+
+
+.timerBundle:nth-of-type(2){
+    background: linear-gradient(to bottom, #A7C7E7, #9AE3E3 , #F6D6FF);
+}
+
+.timerBundle:nth-of-type(2) *{
+    color: #42378F;
+}
+
+
+.timerBundle:nth-of-type(3){
+    background: linear-gradient(135deg, #d6b4fc, #b3c2f2, #8fa9e8);
+    box-shadow: 0 0 12px rgba(110, 206, 218, 0.6);
+    backdrop-filter: blur(4px);
+
+}
+.timerBundle:nth-of-type(3) *{
+    color: #3b2f6e;
+}
+
+.timerBundle:nth-of-type(4){
+    background: linear-gradient(135deg, #e8b8e3, #d6a3f7, #b18be5);
+}
+
+.timerBundle:nth-of-type(4) *{
+    color: #642f66;
+}

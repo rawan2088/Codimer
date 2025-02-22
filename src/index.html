@@ -2,19 +2,85 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css" />
-  </head>
+    <title>CodeTimer</title>
+    <!-- <link rel="stylesheet" href="index.css" /> -->
+     <!-- <link rel="stylesheet" href="deep.css"> -->
+    <link rel="stylesheet" href="chat.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">  </head>
   <body>
-    <div id="controlButtons">
-      <button id="minimize" class="controlButton">➖</button>
-      <button id="maximize" class="controlButton">🗖</button>
-      <button id="close" class="controlButton">❌</button>
-  </div>
-  <div id="mainContent">
-    <time id="mainTimer">00:00:00</time>
-    <button id= "mainTimerBtn">▶️</button>
-  </div>
+
+    <header>
+      <h1>Codimer</h1>
+
+      <div id="controlButtons">
+        <button id="minimize" class="controlButton">
+          —</button>
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="0.75"> <path d="M5 9l4 0l0 -4"></path> <path d="M3 3l6 6"></path> <path d="M5 15l4 0l0 4"></path> <path d="M3 21l6 -6"></path> <path d="M19 9l-4 0l0 -4"></path> <path d="M15 9l6 -6"></path> <path d="M19 15l-4 0l0 4"></path> <path d="M15 15l6 6"></path> </svg> </button> -->
+        <!-- <button id="maximize" class="controlButton">🗖</button> -->
+        <button id="close" class="controlButton">X</button>
+      </div>
+    </header>
+
+
+
+  <main>
+
+    <div id="mainContent">
+
+      <div id="timerContainer">
+        <time id="mainTimer">00:00:00</time>
+        <figcaption id="mainCaption">Reading</figcaption>
+      </div>
+
+      <div class="buttonsContainer">
+        <!-- <button id= "mainTimerBtn">Start</button> -->
+        <button id="saveCurrentTimerBtn">Next</button>
+        <button id="restartBtn">Reset</button>
+<!-- 
+        <button id="mainTimerBtn">
+          <svg class="icon-play">▶</svg>
+          <span>Start</span>
+        </button>
+        <button id="saveCurrentTimerBtn">
+          <svg class="icon-save">💾</svg>
+          <span>Save</span>
+        </button>
+        <button id="restartBtn">
+          <svg class="icon-reset">🔄</svg>
+          <span>Reset</span> -->
+        </button>
+      </div>
+    </div>
+  
+    <div id="timersContainer">
+      <figure class="timerBundle">
+        <time datetime="00:00:00" class="littleTimer" id="readingTime">00:00:00</time>
+        <figcaption class="timer-label">Reading</figcaption>
+      </figure>
+  
+  
+      <figure class="timerBundle">
+      <time datetime="00:00:00" class="littleTimer" id="thinkingTime">00:00:00</time>
+        <figcaption class="timer-label">Thinking</figcaption>
+      </figure>
+  
+  
+      <figure class="timerBundle">
+        <time datetime="00:00:00" class="littleTimer" id="codingTime">00:00:00</time>
+        <figcaption class="timer-label">Coding</figcaption>
+      </figure>
+  
+  
+      <figure class="timerBundle">
+        <time datetime="00:00:00" class="littleTimer" id="debuggingTime">00:00:00</time>
+        <figcaption class="timer-label">Debugging</figcaption>
+      </figure>
+      
+      
+    </div>
+  </main>
   <script src="./renderer.js"></script>
   </body>
 </html>

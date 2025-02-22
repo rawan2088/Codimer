@@ -2,6 +2,7 @@
 // https://www.electronjs.org/docs/latest/tutorial/process-model#preload-scripts
 
 const { contextBridge, ipcRenderer } = require("electron");
+// const { callbackify } = require("util");
 // ContextBridge ensures that the render process and the APIs can communicate safly without the renderer being able to directly access the APIs, which ensures security
 // the ipcRenderer is a module that allows the renderer to send messages to the main process and recieve responses
 
@@ -11,9 +12,10 @@ const { contextBridge, ipcRenderer } = require("electron");
 // The second argument is the methods that you want to expose to the object on the renderer process
 contextBridge.exposeInMainWorld("electronAPI", {
   minimizeWindow: () => ipcRenderer.send("minimizeWindow"), // Here, we name the function, and we send a message to the main function through the chanell name we choose for it to happen
-  maximizeWindow: () => ipcRenderer.send("maximizeWindow"),
+  // maximizeWindow: () => ipcRenderer.send("maximizeWindow"),
   closeWindow: () => ipcRenderer.send("closeWindow"),
   mainTimer: (time, state) => ipcRenderer.send("mainTimer", time, state),
   updateTimer: (callback) => ipcRenderer.on("updatedTime", callback), // here, the callback parameter is recieving the formatted time and the event as two implcitly
   updateState: (callback) => ipcRenderer.on("updateState", callback),
+  reset: () => ipcRenderer.send("reset"),
 });

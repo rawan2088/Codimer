@@ -4,21 +4,33 @@
   padding: 2rem;
 } */
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body{
   margin: 0;
   padding: 0;
   border: none;
-  font-family: 'Courier New', Courier, monospace;
+  /* font-family: 'Courier New', Courier, monospace;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-    Arial, sans-serif;
+    Arial, sans-serif; */
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+    font-style: normal;
   box-sizing: border-box;
-  background-color: rgb(233, 233, 233);
+  /* background-color: rgb(233, 233, 233); */
+  background-color: #FDF0D5;
+  padding: 20px;
 }
 
 #controlButtons{
   box-sizing: border-box;
   height: 15vh;
-  background-color: rgb(2, 80, 80);
+  /* background-color: rgb(2, 80, 80); */
+  background-color: #003049;
   display: flex;
   justify-content: end;
   padding: 2vh;
@@ -27,5 +39,86 @@ body{
 .controlButton{
   /* margin: 0 2vh; */
   cursor: pointer;
+  background-color: #669BBC ;
+  color: #FDF0D5;
+  border: none;
+  padding: 18px 20px;
+  margin: 10px;
 
 }
+
+#mainTimer{
+  color: #003049;
+  font-weight: 900;
+  /* font-size: 10vh; */
+  font-size: 2.5rem;
+}
+
+/* #mainTimer::before{
+  content: "";
+  position: absolute;
+  left: auto;
+  width: 50vh;
+  height: 15vh;
+  /* left: 8px; */
+  /* border-radius: 10px; */
+  /* z-index: -10; */
+  /* background-color: #C1121F; */
+  /* border: 4.5px solid var(--main-color); */
+/* } */
+
+
+#timerContainer{
+background-color: #C1121F;
+  width: 50vh;
+  height: 10vh;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh;
+}
+
+.buttonsContainer{
+  width: max-content;
+  /* display: flex;
+  justify-self: center;
+  align-items: center; */
+}
+
+#mainContent button{
+  width: 10vh;
+  /* align-items: center; */
+}
+
+#close{
+  color: #C1121F;
+}
+
+time{
+  font-weight: 900;
+}
+
+figure *{
+  color: #669BBC;
+}
+
+#timersContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+figcaption{
+  font-size: 0.9rem;
+  color: #669bbc; /* Use your palette’s light blue */
+}
+

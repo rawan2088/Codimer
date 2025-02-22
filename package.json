@@ -1,6 +1,7 @@
 {
   "name": "mynewapp",
-  "productName": "mynewapp",
+  "productName": "Codimer",
+  "author": "Rawan Ahmed",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/index.js",
@@ -30,5 +31,8 @@
   "license": "MIT",
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1"
+  },
+  "build":{
+    "appId": "com.awsome.Codimer"
   }
 }
