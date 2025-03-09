@@ -3,13 +3,20 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Jacquarda Bastarda 9", serif;
+    /* font-family: "Jacquarda Bastarda 9", serif;
     font-weight: 400;
-    font-style: normal;
+    font-style: normal; */
+    
+  font-family: "Pixelify Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   }
   
-  timer{
-    font-family: "Jacquarda Bastarda 9", serif;
+  time{
+    /* font-family: "Jacquarda Bastarda 9", serif; */
+
+    font-size: 1em;
 
   }
   
@@ -165,14 +172,18 @@ timer{
     /* margin-top: 10px; */
     /* box-shadow: 0 0 15px rgba(209, 68, 167, 0.7); */
     transition: 0.5s;
+
   }
   
   #mainTimer {
-    font-size: 6rem;
-    /* font-weight: bold; */
+    /* font-size: 6rem; */
+    font-size: 5rem;
     font-stretch: wider;
+    text-align: center;
     color: white;
     letter-spacing: 5px;
+
+    margin: 0 auto 0 2px;
   }
 
   
@@ -206,32 +217,32 @@ timer{
 
   /* #mainTimerBtn{
     background-color: #FFB6C1;
-    }
-    #saveCurrentTimerBtn{
-      background-color: #FFC3A0;
-      }
-      #restartBtn{
-        background-color: #A7C7E7;
-        } */
-        
-        
-        /* #mainTimerBtn { background: #A02E7C; } Primary action */
-        /* #saveCurrentTimerBtn { background: #5B8C85; } Secondary */
-        /* #restartBtn { background: #2A4D6E; } Tertiary */
-        
-        #mainTimerBtn { background: #A02E7C; } /* Primary action */
-        #saveCurrentTimerBtn { background: #533b5b; } /* Secondary */
-        /* #restartBtn { background: #190019; } Tertiary */
-        
-        .buttonsContainer button:hover {
-          /* transform: scale(1.1); */
-          opacity: 100%;
-        } 
-        
-        /* TIMER BUNDLES */
-        #timersContainer {
-          display: flex;
-          gap: 1rem;
+  }
+  #saveCurrentTimerBtn{
+    background-color: #FFC3A0;
+  }
+  #restartBtn{
+    background-color: #A7C7E7;
+  } */
+      
+    
+  /* #mainTimerBtn { background: #A02E7C; } Primary action */
+  /* #saveCurrentTimerBtn { background: #5B8C85; } Secondary */
+  /* #restartBtn { background: #2A4D6E; } Tertiary */
+  
+  #mainTimerBtn { background: #A02E7C; } /* Primary action */
+  #saveCurrentTimerBtn { background: #533b5b; } /* Secondary */
+  /* #restartBtn { background: #190019; } Tertiary */
+  
+  .buttonsContainer button:hover {
+    /* transform: scale(1.1); */
+    opacity: 100%;
+  } 
+    
+  /* TIMER BUNDLES */
+  #timersContainer {
+    display: flex;
+    gap: 1rem;
     /* margin-top: rem; */
   }
   
@@ -250,7 +261,7 @@ timer{
     justify-content: center;
     align-items: center;
     
-    animation: glow 1.5s infinite alternate;
+    animation: glow 2s infinite alternate;
     box-shadow: 0 0 15px rgba(112, 225, 232, 0.8);
     
 }
@@ -282,33 +293,39 @@ timer{
 background: linear-gradient(to bottom, #E6CFFF, #FFD1DC, #FFF5E1);
 }
 
+
+.timerBundle:nth-of-type(2){
+    /* background: linear-gradient(to bottom, #A7C7E7, #9AE3E3 , #F6D6FF); */
+    background: linear-gradient(135deg, #b5e0dc, #d0b3e1);
+
+}
+
+.timerBundle:nth-of-type(3){
+    /* background: linear-gradient(135deg, #d6b4fc, #b3c2f2, #8fa9e8);
+    box-shadow: 0 0 12px rgba(110, 206, 218, 0.6);
+    backdrop-filter: blur(4px); */
+    background: linear-gradient(135deg, #c8b7e1, #e3c6e3);
+
+
+}
+.timerBundle:nth-of-type(4){
+    background: linear-gradient(135deg, #e8b8e3, #d6a3f7, #b18be5);
+}
+
+
 .timerBundle:nth-of-type(1) *{
     color: #6D4C74;
 }
 
 
-.timerBundle:nth-of-type(2){
-    background: linear-gradient(to bottom, #A7C7E7, #9AE3E3 , #F6D6FF);
-}
-
 .timerBundle:nth-of-type(2) *{
     color: #42378F;
 }
 
-
-.timerBundle:nth-of-type(3){
-    background: linear-gradient(135deg, #d6b4fc, #b3c2f2, #8fa9e8);
-    box-shadow: 0 0 12px rgba(110, 206, 218, 0.6);
-    backdrop-filter: blur(4px);
-
-}
 .timerBundle:nth-of-type(3) *{
     color: #3b2f6e;
 }
 
-.timerBundle:nth-of-type(4){
-    background: linear-gradient(135deg, #e8b8e3, #d6a3f7, #b18be5);
-}
 
 .timerBundle:nth-of-type(4) *{
     color: #642f66;

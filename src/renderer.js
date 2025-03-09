@@ -72,10 +72,12 @@ window.electronAPI.updateTimer((event, formatedTime, nonFormatedTime) => {
 
 function next() {
   {
+    let caption = document.getElementById("mainCaption");
     console.log(timerState.currentTimer);
 
     if (timers.debuggingTime != 0) {
       window.electronAPI.reset();
+      caption.innerText = "Reading";
     } else {
       for (const element in timers) {
         if (timers[element] == 0) {
@@ -100,8 +102,6 @@ function next() {
           break;
         }
       }
-
-      let caption = document.getElementById("mainCaption");
 
       switch (0) {
         case timers.readingTime:
